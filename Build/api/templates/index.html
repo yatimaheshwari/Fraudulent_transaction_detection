@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Prediction</title>
+</head>
+<body>
+    <h1>Fraud Prediction Form</h1>
+    <form action="/predict" method="post">
+        <label for="amount">Amount:</label>
+        <input type="number" step="0.01" id="amount" name="amount" required><br><br>
+        
+        <label for="oldbalanceOrg">Old Balance (Origin):</label>
+        <input type="number" step="0.01" id="oldbalanceOrg" name="oldbalanceOrg" required><br><br>
+        
+        <label for="newbalanceOrig">New Balance (Origin):</label>
+        <input type="number" step="0.01" id="newbalanceOrig" name="newbalanceOrig" required><br><br>
+        
+        <label for="Actual_amount_dest">Actual Amount (Destination):</label>
+        <input type="number" step="0.01" id="Actual_amount_dest" name="Actual_amount_dest" required><br><br>
+        
+        <label for="type_TRANSFER">Transaction Type (TRANSFER=1, CASH_OUT=0):</label>
+        <input type="number" id="type_TRANSFER" name="type_TRANSFER" required min="0" max="1"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
